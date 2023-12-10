@@ -26,7 +26,8 @@ Auth::routes();
 Route::get('/search', [App\Http\Controllers\SearchController::class, 'show']);
 Route::get('/products/json', [App\Http\Controllers\SearchController::class, 'data']);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\Admin\CategoryController::class, 'index'])->name('home');
 Route::get('/products/{id}', [App\Http\Controllers\ProductController::class, 'show'])->name('show');//formulario
 Route::get('/categories/{category}', [App\Http\Controllers\CategoryController::class, 'show']);
 

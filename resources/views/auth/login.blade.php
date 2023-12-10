@@ -2,6 +2,14 @@
 
 @section('body-class', 'signup-page')
 
+@section("styles")
+    <style>
+        .custom-main-background{
+            background: white;
+        }
+    </style>
+@endsection
+
 @section('content')
 <div class="header header-filter" style="background-image: url('{{asset('img/city.jpg')}}'); background-size: cover; background-position: top center;">
 <div class="container">
@@ -10,19 +18,9 @@
             <div class="card card-signup">
                 <form method="POST" action="{{ route('login') }}">
                 @csrf
-                    <div class="header header-primary text-center">
+                    <div class="header header-danger text-center">
                         <h4>Inicio de sesión</h4>
-                        <!--<div class="social-line">
-                            <a href="#pablo" class="btn btn-simple btn-just-icon">
-                                <i class="fa fa-facebook-square"></i>
-                            </a>
-                            <a href="#pablo" class="btn btn-simple btn-just-icon">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                            <a href="#pablo" class="btn btn-simple btn-just-icon">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                        </div>-->
+
                     </div>
                     <p class="text-divider">Ingresa tus datos</p>
                     <div class="content">
@@ -55,25 +53,12 @@
 
 
 
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                Recordar sesión
-                            </label>
-                        </div>
 
-                         <!--@if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                        @endif -->
 
                     </div>
                     <div class="footer text-center">
-                        <button type="submit" class="btn btn-simple btn-primary btn-lg">Ingresar</button>
-                        <!--<button type="submit" class="btn btn-simple btn-primary btn-lg">
-                                    {{ __('Login') }}
-                                </button>-->
+                        <button type="submit" class="btn btn-simple btn-danger btn-lg">Ingresar</button>
+
                     </div>
                 </form>
             </div>

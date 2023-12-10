@@ -10,7 +10,7 @@
     <div class="container">
 
         <div class="section">
-            <h2 class="title text-center">Editar categoria</h2>
+            <h2 class="title text-center">Editar foto</h2>
 
             @if ($errors->any())
             <div class="alert alert-danger">
@@ -27,16 +27,16 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group label-floating">
-                            <label class="control-label">Nombre del categoria</label>
+                            <label class="control-label">Nombre del foto</label>
                             <input type="text" class="form-control" name="name" value="{{old('name' , $category->name)}}">
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <label class="control-label">Imagen de la categoria</label>
+                        <label class="control-label">Imagen de la foto</label>
                         <input type="file" name="image">
                         @if ($category->image)
-                        <p class="help-block"> 
-                            Subir solo si desea reemplazar la 
+                        <p class="help-block">
+                            Subir solo si desea reemplazar la
                             <a href="{{ asset('/images/categories/'.$category->image) }}" target="_blank">imagen actual</a>
                         </p>
                         @endif

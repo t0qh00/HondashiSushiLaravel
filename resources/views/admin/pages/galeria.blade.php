@@ -88,12 +88,12 @@
         </div>
 
         <div class="section text-center">
-            <div class="team">
+            <div>
                 <div class="row">
                     @foreach ($categories as $category)
-                    <div class="col-md-4">
-                        <div class="team-player">
-                            <img src="{{ $category->featured_image_url}}" alt="Thumbnail Image" class="img-raised ">
+                    <div class="col-md-6">
+                        <div>
+                            <img src="{{ $category->featured_image_url}}" alt="Thumbnail Image" class="img-raised imgGalery">
                             <h4 class="title">
                                 {{ $category->name}}
                             </h4>

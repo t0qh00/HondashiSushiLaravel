@@ -73,10 +73,10 @@
 										<a href="{{url('/home')}}">Dashboard</a>
 									</li>--}}
 									@if(auth()->user()->admin)
-									<li>
+									{{--<li>
 										<a href="{{url('/admin/categories')}}">Gestionar imagenes</a>
 									</li>
-									{{--<li>
+									<li>
 										<a href="{{url('/admin/products')}}">Gestionar productos</a>
 									</li>--}}
 									@endif
@@ -100,7 +100,7 @@
     	</div>
 
     </nav>
-	<div class="wrapper" style="background: black">
+	<div class="wrapper custom-main-background">
         @yield('content')
     </div>
 

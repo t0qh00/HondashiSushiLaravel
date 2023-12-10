@@ -51,7 +51,7 @@ class CategoryController extends Controller
 
         if($request->hasFile('image'))
         {
-            $file = $request->file('photo');
+            $file = $request->file('image');
             $path = public_path().'/images/categories';
             $fileName = uniqid() . '-' . $file->getClientOriginalName();
             $moved = $file->move($path,$fileName);

@@ -12,8 +12,18 @@
     width: 400px;
     height: auto;
 }
+
+.imgGalery{
+    max-width: 500px;
+    height: auto;
+}
+
 .principalImage{
     width: auto;
+}
+
+.custom-main-background{
+    background: black;
 }
 
 @media only screen and (max-width: 960px){
